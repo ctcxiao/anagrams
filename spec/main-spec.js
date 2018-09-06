@@ -9,4 +9,11 @@ describe('main()', () => {
         expect(actualText).toBe(expectText);
     });
 
+    it('should return all letter group when give two letter', function () {
+        let input = "ab";
+        let actualText = "ab,ba";
+        let expectText = main.main(input);
+        expect(actualText).toBe(expectText);
+    });
+
 });
