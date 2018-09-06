@@ -16,4 +16,11 @@ describe('main()', () => {
         expect(actualText).toBe(expectText);
     });
 
+    it('should return all letter group when give three letter', function () {
+        let input = "abc";
+        let actualText = "abc,acb,bac,bca,cab,cba";
+        let expectText = main.main(input);
+        expect(actualText).toBe(expectText);
+    });
+
 });
