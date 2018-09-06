@@ -11,16 +11,22 @@ describe('main()', () => {
 
     it('should return all letter group when give two letter', function () {
         let input = "ab";
-        let actualText = "ab,ba";
+        let actualText = "ba ab";
         let expectText = main.main(input);
         expect(actualText).toBe(expectText);
     });
 
     it('should return all letter group when give three letter', function () {
         let input = "abc";
-        let actualText = "abc,acb,bac,bca,cab,cba";
+        let actualText = "cba bca bac cab acb abc";
         let expectText = main.main(input);
         expect(actualText).toBe(expectText);
+    });
+
+    it('should return all letter group when give four letter', function () {
+        let input = "biro";
+        let expectText = main.main(input);
+        expect(24).toBe(expectText.split(" ").length);
     });
 
 });
